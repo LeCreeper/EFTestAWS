@@ -1,0 +1,50 @@
+﻿@model EFTestAWS.Models.ButtonData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ButtonData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageData1.PageTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageData1.PageTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ButtonID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ButtonID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ButtonDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ButtonDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ButtonDestinationPage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ButtonDestinationPage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

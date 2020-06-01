@@ -1,0 +1,51 @@
+﻿@model IEnumerable<EFTestAWS.Models.ButtonData>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PageData1.PageTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ButtonID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ButtonDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ButtonDestinationPage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageData1.PageTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ButtonID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ButtonDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ButtonDestinationPage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
